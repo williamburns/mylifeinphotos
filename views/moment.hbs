@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}} -- my life in photos</title>
+
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="/css/moment.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Signika&display=swap" rel="stylesheet" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div id="wrapper">
+    <div id="header" class="signika">
+        <a href="/"><img src="/img/logo.png" /></a><br>
+        <a href="/moment/{{alias}}"><h3 class="signika">{{title}}</h3></a>
+    </div>
+    <div id="content">
+        <div class="grid">
+            <div class="row">
+                {{#each columns}}
+                    <div class="column">
+                        {{#each this}}
+                            <a href="/moment/{{../../alias}}/{{removeExt this}}"><img src="/img/moments/{{../../alias}}/{{this}}"/></a>
+                        {{/each}}
+                    </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+    <br>
+    <div id="footer">
+        <p class="signika"><a target="_blank" href="https://instagram.com/williamgburns/">@williamgburns</a> -- last updated, 17th march 2020</p>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+@import url('site.css');
+
+/* header */
+
+#header {
+    height: 100px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#header img {
+    width: 100%;
+    max-width: 261px;
+    display: inline-block;
+}
+
+/* content */
+
+#content {
+    padding-bottom: 50px; /* footer height */
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* grid */
+
+.grid * {
+    box-sizing: border-box;
+}
+
+.grid .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+.grid .column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+.grid .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 800px) {
+    .grid .column {
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .grid .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+}

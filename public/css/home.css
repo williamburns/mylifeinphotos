@@ -1,0 +1,45 @@
+@import url('site.css');
+
+/* header */
+
+#header {
+    padding-top: 40px;
+}
+
+#header img {
+    width: 100%;
+    max-width: 700px;
+}
+
+/* moments */
+
+#moments {
+    display: flex;
+    width: 70%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 auto;
+    padding-bottom: 50px; /* footer height */
+}
+
+.moment {
+    width: 200px;
+    height: 200px;
+    background-size: 200px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    padding: 20px;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    #header span {
+        display: none;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+}

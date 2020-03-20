@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>my life in photos</title>
+
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="/css/home.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Signika&display=swap" rel="stylesheet" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div id="wrapper">
+    <div id="header">
+        <span class="arcana" style="font-size: 20px;">A PROJECT BY</span>
+        <span class="arcana" style="font-size: 30px;">&nbsp;william burns</span>
+        <span><br><br></span>
+        <img src="/img/logo.png" />
+        <br>
+        <p class="signika description" style="text-align: left;">
+            This website is a compilation of my favourite photos. I take a lot of pictures - some of my family, some of my friends and some of myself. I made this primarily as a timeline to look back at in the future - a photo diary... a photo journal.
+        </p>
+        <br>
+        <p class="arcana">CHOOSE A MOMENT</p>
+    </div>
+    <div id="moments" class="signika">
+        {{#each moments}}
+            <a href="/moment/{{this.alias}}/">
+                <div class="moment" style="background-image: url('img/{{this.alias}}.png');">
+                    {{this.title}}
+                </div>
+            </a>
+        {{/each}}
+    </div>
+    <div id="footer">
+        <p class="signika"><a target="_blank" href="https://instagram.com/williamgburns/">@williamgburns</a> -- last updated, 17th march 2020</p>
+    </div>
+</div>
+</body>
+</html>
